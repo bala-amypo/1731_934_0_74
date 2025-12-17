@@ -8,7 +8,7 @@ import com.example.demo.repository.StudentRepo;
 import com.example.demo.service.StudentService;
 
 @service
-puyblic class StudentServiceImpl implements StudentService
+public class StudentServiceImpl implements StudentService
 {
 @Autowired
 StudentRepo
@@ -17,14 +17,14 @@ StudentRepo
 public Student insertStudent(Student st)
 {
 
-    stRepo.save(st)
+    stRepo.save(st);
    
     return st;
 }
  @Override
  public List<Student> getAllStudent()
  {
-    return stRepo.findAll()
+    return stRepo.findAll();
  }
  @Override
  public Optional<Student> getOneStudent(Long id ) 
