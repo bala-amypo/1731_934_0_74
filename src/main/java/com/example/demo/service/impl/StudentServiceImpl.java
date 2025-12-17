@@ -8,4 +8,14 @@ import com.example.demo.repository.StudentRepo;
 import com.example.demo.service.StudentService;
 
 @service
-puybl8
+puyblic class StudentServiceImpl implements StudentService
+{
+@Autowired
+StudentRepo
+
+@Override
+public Student insertStudent(Student st)
+{
+    
+}
+}
