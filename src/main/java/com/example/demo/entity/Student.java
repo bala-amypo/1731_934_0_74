@@ -19,11 +19,9 @@ public class Student {
     private LocalDate dob;
     private float cgpa;
 
-    // No-argument constructor (required by JPA)
     public Student() {
     }
 
-    // Parameterized constructor
     public Student(Long id, String name, String email, LocalDate dob, float cgpa) {
         this.id = id;
         this.name = name;
@@ -32,7 +30,6 @@ public class Student {
         this.cgpa = cgpa;
     }
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }

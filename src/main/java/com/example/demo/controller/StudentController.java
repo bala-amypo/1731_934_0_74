@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -46,7 +47,7 @@ public class StudentController {
         if (student.isPresent()) {
             newStudent.setId(id);
             studentService.insertStudent(newStudent);
-            return "Updated Success";
+            return "Update Success";
         }
 
         return "Id not found";
@@ -59,7 +60,7 @@ public class StudentController {
 
         if (student.isPresent()) {
             studentService.deleteStudent(id);
-            return "Deleted Success";
+            return "Delete Success";
         }
 
         return "Id Not Found";
