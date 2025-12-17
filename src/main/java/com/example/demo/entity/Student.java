@@ -1,33 +1,75 @@
 package com.example.demo.entity;
 
-public class Studententity {
-    private int id;
+import java.time.LocalDate;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String name;
-    private int cgp;
-    public int getId() {
+    private String email;
+    private LocalDate dob;
+    private float cgpa;
+
+    // No-argument constructor (required by JPA)
+    public Student() {
+    }
+
+    // Parameterized constructor
+    public Student(Long id, String name, String email, LocalDate dob, float cgpa) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.dob = dob;
+        this.cgpa = cgpa;
+    }
+
+    // Getters and Setters
+    public Long getId() {
         return id;
     }
-    public void setId(int id) {
+
+    public void setId(Long id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
-    public Studententity() {
-    }
+
     public void setName(String name) {
         this.name = name;
     }
-    public int getCgp() {
-        return cgp;
-    }
-    public void setCgp(int cgp) {
-        this.cgp = cgp;
-    }
-    public Studententity(int id, String name, int cgp) {
-        this.id = id;
-        this.name = name;
-        this.cgp = cgp;
+
+    public String getEmail() {
+        return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+
+    public float getCgpa() {
+        return cgpa;
+    }
+
+    public void setCgpa(float cgpa) {
+        this.cgpa = cgpa;
+    }
 }
