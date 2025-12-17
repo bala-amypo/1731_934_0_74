@@ -16,6 +16,11 @@ StudentRepo
 @Override
 public Student insertStudent(Student st)
 {
-    
+
+    stRepo.save(st)
+   
+    return st;
 }
+ @Override
+ public list<student> getAllStudent()
 }
