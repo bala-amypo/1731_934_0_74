@@ -27,5 +27,13 @@ public Student insertStudent(Student st)
     return stRepo.findAll()
  }
  @Override
- public Optional<> 
+ public Optional<Student> getOneStudent(Long id ) 
+ {
+    return stRepo.findById(id);
+ }
+ @Override
+ public void deleteStudent(Long id)
+ {
+    stRepo.deleteById(id);
+ }
 }
