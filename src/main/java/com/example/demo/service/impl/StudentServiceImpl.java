@@ -22,5 +22,10 @@ public Student insertStudent(Student st)
     return st;
 }
  @Override
- public list<student> getAllStudent()
+ public List<Student> getAllStudent()
+ {
+    return stRepo.findAll()
+ }
+ @Override
+ public Optional<> 
 }
